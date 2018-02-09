@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <th><h4>Id</h4></th>
+    <th><h4>Title</h4></th>
+    <th><h4>Body</h4></th>
+    <th><h4>Details</h4></th>
+  </tr>
+  <tr *ngFor="let userObject of user | async">
+    <td >{{ userObject.id }}</td>
+    <td>{{ userObject.body }}</td>
+    <td>{{ userObject.title }}</td>
+    <td><a [routerLink]="['/postdetails', userObject.id]"> #####</a></td>
+  </tr>
+</table>
